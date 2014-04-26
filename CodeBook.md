@@ -1,5 +1,4 @@
 
-
 ##The data:
 ======================
 Data was obtained from the following link:
@@ -39,42 +38,46 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 - 'test/subject_test.txt' : Subject identifier for test values
 The subfolders 'test/Inertial Signals' and 'train/Inertial Signals' were not used for this analysis
 
-##The transformation of this data included:
+###The transformation of this data included:
 ===========================================
 The analysis was done using the 'run_analysis.R'. The test and training data were merged ('X_train', 'y_train', 'subject_train.txt', 'X_test', 'y_test', 'subject_test.txt'), and the activities were labled using the provided activity_labels.txt. This data was then reduced to only contain those values from the feature vector that describe the mean (mean()) and standard deviation(std()) of the following 33 measurements (66 features). These values were then used to create a tidy dataset which is the average of each variable for each activity (6) and subject (30) - (180*68).
 
-##The variables
+###Variables
 =========================
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+- SubjectNumber - number 1 through 30 describing subject
+- activity_name - description of what the activity was done during recording
 
-##The processed dataset includes the following files:
+ The following features are normalized and bounded within [-1,1].
+ '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+- tBodyAcc-XYZ
+- tGravityAcc-XYZ
+- tBodyAccJerk-XYZ
+- tBodyGyro-XYZ
+- tBodyGyroJerk-XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc-XYZ
+- fBodyAccJerk-XYZ
+- fBodyGyro-XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
+
+###The processed dataset includes the following files:
 =======================================
--'README.md'
--'CodeBook.md' - describes the variables in tidydata
--'tidydata.txt' - processed data
--'run_analysis.R' - R file that goes from the url to the tidydata.txt
+- 'README.md'
+- 'CodeBook.md' - describes the variables in tidydata
+- 'tidydata.txt' - processed data
+- 'run_analysis.R' - R file that goes from the url to the tidydata.txt
 
-###Notes: 
-======
-- Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file.
+
+
+
 
 
